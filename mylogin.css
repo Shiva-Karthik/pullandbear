@@ -1,0 +1,114 @@
+.loginarea{
+    margin-top: -5px;
+    margin-left: 1140px;
+    margin-bottom: 200px;
+    background-color: transparent;
+    position: relative;
+    font-family: 'Archivo Narrow', sans-serif;
+    /* margin: auto; */
+}
+
+.loginbox{
+    width: 350px;
+    height: 400px;
+    position: relative;
+    background-color: white;
+    padding: 8px;
+    overflow: hidden;
+    
+}
+
+.loginheader{
+    display: flex;
+    width: 364px;
+    height: 38px;
+    margin-top: -10px;
+    margin-left: -8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+}
+
+.loginword{
+    width: 60px;
+    height: 40%;
+    margin-left: 150px;
+    padding: 5px 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.cancelbutton{
+    margin-inline-start: auto;
+    padding: 1px 0px;
+    
+}
+
+.cancelbutton button{
+    border: 0;
+    background-color: transparent;
+    font-size: 30px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+#email {
+    line-height: 50px;
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-right: 0;
+    border-left: 0;
+    border-top: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background-color: transparent;
+}
+
+#password{
+    line-height: 50px;
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-right: 0;
+    border-left: 0;
+    border-top: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background-color: transparent;
+}
+
+.login-submit-btn{
+    height: 50px;
+    width: 100%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin-top: 20px;
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    
+}
+
+.register-submit-btn{
+    height: 50px;
+    width: 100%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin-top: 20px;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.register-submit-btn:hover{
+    background-color: black;
+    color: white;
+}
