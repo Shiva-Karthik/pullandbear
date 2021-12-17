@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing</title>
+    <link rel="stylesheet" href="see4.css">
+    <!-- <link rel="stylesheet" href="newClothing.css"> -->
+    <!-- <link rel="stylesheet" href="newFilter.css"> -->
+
+    <style></style>
+</head>
+<body>
+    <div id="b1">
+        <button id="btn2">see all</button>
+        <a href="sweatshirt.html" target="_parent"> <button id="btn2"> Hoodies</button></a>
+        <a href="basics.html" target="_parent"><button id="btn2">Basics</button></a>
+        <a href="Licensed.html" target="_parent"><button id="btn2">Licensed</button></a>
+        <a href="p&b.html" target="_parent"><button id="btn2">Pull&Bear</button></a>
+    <div id="b2">
+        <a href="see2.html" target="_parent"><button id="btn2" >See 2</button></a>
+        <button id="filter" >Filter</button>
+    </div>
+       </div>
+   <div id="container">
+       </div>
+</body>
+</html>
+
+<script>
+
+    var cart = [];
+// Data Creation
+var data = [{image: "https://static.pullandbear.net/2/photos//2022/V/0/2/p/8711/514/505/03/8711514505_6_1_8.jpg?t=1638891573420&imwidth=375", 
+name: "Coloured STWD puffed gilet", 
+price: 29.99}, 
+{image: "https://static.pullandbear.net/2/photos//2022/V/0/2/p/4674/501/707/4674501707_2_7_8.jpg?t=1638889763409&imwidth=375", 
+name: "Skate Chino trousers", 
+price: 29.99},
+{image: "https://static.pullandbear.net/2/photos//2022/V/1/2/p/2301/940/008/02/2301940008_5_1_8.jpg?t=1638895143585&imwidth=750",
+name: "Contrast trainers",
+price: 49.99, 
+},
+{image: "https://static.pullandbear.net/2/photos//2022/V/0/2/p/8685/917/707/02/8685917707_6_1_8.jpg?t=1638890354141&imwidth=375",
+name: "Coloured jeans with faded details",
+price: 35.99,}
+]
+// Data mapped to container div using map function
+    data.map(function (el) {
+        // Main div has two div inside
+    var maindiv = document.createElement("div");
+    var image = document.createElement("img");
+    // image assigned image data
+    image.setAttribute("src", el.image);
+    image.setAttribute("id", "img");
+    console.log(image);
+    var div1 = document.createElement("div");
+    var select = document.createElement("select");
+    select.setAttribute("id", "sel");
+    var otp1 = document.createElement("option");
+    otp1.setAttribute("value", "^");
+    otp1.textContent = "^";
+    var otp2 = document.createElement("option");
+    otp2.setAttribute("value", "S");
+    otp2.textContent = "S";
+    var otp3 = document.createElement("option");
+    otp3.setAttribute("value", "M");
+    otp3.textContent = "M";
+    var otp4 = document.createElement("option");
+    otp4.setAttribute("value", "L");
+    otp4.textContent = "L";
+    var otp5 = document.createElement("option");
+    otp5.setAttribute("value", "XL");
+    otp5.textContent = "XL";
+    select.append(otp1, otp2, otp3, otp4, otp5);
+    var btn = document.createElement("button");
+    btn.textContent = "ADD";
+    btn.setAttribute("id", "addbtn");
+    div1.append(select, btn);
+    var div2 = document.createElement("div");
+     var h6 = document.createElement("h6")   ;
+     h6.textContent = el.name;
+     h6.setAttribute("id", "name");
+     var p = document.createElement("p");
+     p.textContent = el.price;
+     p.setAttribute("id", "price");
+     div2.append(h6, p);
+    maindiv.append(image, div1, div2);
+    document.querySelector("#container").append(maindiv);
+    btn.addEventListener("click", function(){
+        var newdata = {
+            image: el.image,
+            name: el.name,
+            price: el.price,
+            size: select.value,
+        }
+        cart.push(newdata);
+        localStorage.setItem("cart", JSON.stringify(cart));
+    })
+});
+
+document.querySelector("#cancel").addEventListener("click", function(){
+        document.querySelector(".sidebar").style.right = "-375px";
+        document.querySelector("#cancel").style.right = "-375px";
+        document.querySelector("#filter").style.opacity = "1";
+        // document.querySelector("#cancel").style.opacity = "0";
+
+        
+    });
+
+    document.querySelector("#filter").addEventListener("click", function(){
+        document.querySelector(".sidebar").style.right = "0px";
+        document.querySelector("#filter").style.opacity = "0";
+        document.querySelector("#cancel").style.right = "0";
+        document.querySelector("#cancel").style.transition = "all .5s ease";
+        // document.querySelector("#cancel").style.opacity = "1";
+    });
+
+    document.querySelector("#s").addEventListener("click", function(){
+        document.querySelector("#s").style.backgroundColor = "black";
+        document.querySelector("#s").style.color = "white";
+    })
+    document.querySelector("#m").addEventListener("click", function(){
+        document.querySelector("#m").style.backgroundColor = "black";
+        document.querySelector("#m").style.color = "white";
+    })
+    document.querySelector("#l").addEventListener("click", function(){
+        document.querySelector("#l").style.backgroundColor = "black";
+        document.querySelector("#l").style.color = "white";
+    })
+    document.querySelector("#xl").addEventListener("click", function(){
+        document.querySelector("#xl").style.backgroundColor = "black";
+        document.querySelector("#xl").style.color = "white";
+    })
+
+</script>

@@ -1,13 +1,12 @@
 
 #container {
     overflow: hidden;
-}
-#navbar {
-    grid-area: nav;
+    border: 1px solid teal;
 }
 #newImage {
     height: 650px;
     width: 100%;
+    margin-top: -200px;
 }
 #giftImage {
     height: 550px;
@@ -326,71 +325,6 @@ button:hover {
   
   
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  /* .footer{
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: repeat(9, 1fr);
-        grid-template-areas: 
-      
-        "c c h h b b a a a a a a"
-        "c c h h b b a a a a a a"
-        "c c h h b b a a a a a a"
-        "c c h h b b p p p p p p"
-        "c c h h b b p p p p p p"
-        "c c h h b b p p p p p p"
-        "c c h h b b f f f f f f"
-        "c c h h b b f f f f f f"
-        "c c h h b b f f f f f f";
-      }
-      
-      
-      
-      .customer{
-        border: 1px solid red;
-        grid-area: c;
-      }
-      
-      .help{
-        grid-area: h;
-        border: 1X solid red;
-      }
-      
-      .business{
-        grid-area: b;
-        border: 1X solid red;
-      }
-      
-      .app{
-        grid-area: a;
-        border: 1X solid red;
-      }
-      
-      .payment{
-        grid-area: p;
-        border: 1X solid red;
-      }
-      
-      .follow{
-        grid-area: f;
-        border: 1X solid red;
-    } */
 
 
 
@@ -449,6 +383,7 @@ button:hover {
   
    background-color: transparent;
    margin-left: 30%;
+   margin-top: -200px;
    display:flex;
    position: fixed;
    justify-content: right;
@@ -532,6 +467,7 @@ margin-left: 35px;
 .box1{
 height:400px;
 width :300px;
+margin-top: -200px;
 /* border: 1px solid rgb(104, 45, 243); */
 align-content: space-between;
 position: fixed;
@@ -674,11 +610,11 @@ input {
   border: 1px solid black;
   line-height: 20px;
   position: fixed;
-  margin: 0px 150px;
+  margin: 0px 180px 0px 200px;
   background-color: white;
   display: none;
-  width: 80%;
-
+  width: 70%;
+  margin-top: -180px
 }
 
 #header {

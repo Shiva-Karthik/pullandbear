@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Woman Home Page</title>
     <link rel = "stylesheet" href = "manHomePage.css">
+    <link rel="stylesheet" href="mylogin.css">
 </head>
 <body>
     <div id = "container">
@@ -55,6 +56,26 @@
       </div>
       
   </div>
+
+
+<!-- Login pop up -->
+
+<div class="loginarea">
+  <div class="loginbox">
+    <div class="loginheader">
+      <div class="loginword">LOG IN</div>
+      <div class="cancelbutton">
+        <button><a href="">X</a></button>
+      </div>
+    </div>
+    <input id="email" type="text" placeholder="Email address" required/>
+    <input id="password" type="password" placeholder="Password" required/>
+    <button class="login-submit-btn" onclick="showWrongPassword()">LOG IN</button>
+    <button class="register-submit-btn">REGISTER</button>
+  </div>
+</div>
+
+
     <div class="box1">
         <div class="left"><h4 class="women">WOMEN </h4><h5 id="divide">|</h5><a href="manHomePage.html" target="_parent"><h4 class="men"> MEN</h4></a></div>
      <div class="new"><h3>NEW</h3></div>
