@@ -19,8 +19,17 @@
         <a href="Licensed.html" target="_parent"><button id="btn2">Licensed</button></a>
         <a href="p&b.html" target="_parent"><button id="btn2">Pull&Bear</button></a>
     <div id="b2">
-        <a href="see2.html" target="_parent"><button id="btn2" >See 2</button></a>
-        <button id="filter" >Filter</button>
+        <!-- <a href="see2.html" target="_parent"> -->
+            <button id="display" onclick="filterDisplay()" >See 2</button>
+            <!-- <select id = "display" onchange="filterDisplay()">
+                <option value = "4">See 4</option>
+                <option value = "2">See 2</option>
+            </select> -->
+        <select id = "filter" onchange="filterNumber()">
+            <option>Filter</option>
+            <option value = "low">Low to High</option>
+            <option value = "high">High to Low</option>
+        </select>
     </div>
        </div>
    <div id="container">
@@ -32,20 +41,23 @@
 
     var cart = [];
 // Data Creation
-var data = [{image: "https://static.pullandbear.net/2/photos//2022/V/0/2/p/8711/514/505/03/8711514505_6_1_8.jpg?t=1638891573420&imwidth=375", 
-name: "Coloured STWD puffed gilet", 
-price: 29.99}, 
-{image: "https://static.pullandbear.net/2/photos//2022/V/0/2/p/4674/501/707/4674501707_2_7_8.jpg?t=1638889763409&imwidth=375", 
-name: "Skate Chino trousers", 
-price: 29.99},
-{image: "https://static.pullandbear.net/2/photos//2022/V/1/2/p/2301/940/008/02/2301940008_5_1_8.jpg?t=1638895143585&imwidth=750",
+var data = [{image: "https://static.pullandbear.net/2/photos//2022/V/1/2/p/2301/940/008/02/2301940008_5_1_8.jpg?t=1638895143585&imwidth=750",
 name: "Contrast trainers",
 price: 49.99, 
 },
 {image: "https://static.pullandbear.net/2/photos//2022/V/0/2/p/8685/917/707/02/8685917707_6_1_8.jpg?t=1638890354141&imwidth=375",
 name: "Coloured jeans with faded details",
-price: 35.99,}
+price: 35.99,},
+    {image: "https://static.pullandbear.net/2/photos//2022/V/0/2/p/8711/514/505/03/8711514505_6_1_8.jpg?t=1638891573420&imwidth=375", 
+name: "Coloured STWD puffed gilet", 
+price: 29.99}, 
+{image: "https://static.pullandbear.net/2/photos//2022/V/0/2/p/4674/501/707/4674501707_2_7_8.jpg?t=1638889763409&imwidth=375", 
+name: "Skate Chino trousers", 
+price: 29.99},
 ]
+displayItem(data);
+function displayItem(){
+    document.querySelector("#container").innerHTML = "";
 // Data mapped to container div using map function
     data.map(function (el) {
         // Main div has two div inside
@@ -98,40 +110,71 @@ price: 35.99,}
         cart.push(newdata);
         localStorage.setItem("cart", JSON.stringify(cart));
     })
-});
+})
+};
 
-document.querySelector("#cancel").addEventListener("click", function(){
-        document.querySelector(".sidebar").style.right = "-375px";
-        document.querySelector("#cancel").style.right = "-375px";
-        document.querySelector("#filter").style.opacity = "1";
-        // document.querySelector("#cancel").style.opacity = "0";
+// document.querySelector("#cancel").addEventListener("click", function(){
+//         document.querySelector(".sidebar").style.right = "-375px";
+//         document.querySelector("#cancel").style.right = "-375px";
+//         document.querySelector("#filter").style.opacity = "1";
+//         // document.querySelector("#cancel").style.opacity = "0";
 
         
-    });
+//     });
 
-    document.querySelector("#filter").addEventListener("click", function(){
-        document.querySelector(".sidebar").style.right = "0px";
-        document.querySelector("#filter").style.opacity = "0";
-        document.querySelector("#cancel").style.right = "0";
-        document.querySelector("#cancel").style.transition = "all .5s ease";
-        // document.querySelector("#cancel").style.opacity = "1";
-    });
+    // document.querySelector("#filter").addEventListener("click", function(){
+    //     document.querySelector(".sidebar").style.right = "0px";
+    //     document.querySelector("#filter").style.opacity = "0";
+    //     document.querySelector("#cancel").style.right = "0";
+    //     document.querySelector("#cancel").style.transition = "all .5s ease";
+    //     // document.querySelector("#cancel").style.opacity = "1";
+    // });
 
-    document.querySelector("#s").addEventListener("click", function(){
-        document.querySelector("#s").style.backgroundColor = "black";
-        document.querySelector("#s").style.color = "white";
-    })
-    document.querySelector("#m").addEventListener("click", function(){
-        document.querySelector("#m").style.backgroundColor = "black";
-        document.querySelector("#m").style.color = "white";
-    })
-    document.querySelector("#l").addEventListener("click", function(){
-        document.querySelector("#l").style.backgroundColor = "black";
-        document.querySelector("#l").style.color = "white";
-    })
-    document.querySelector("#xl").addEventListener("click", function(){
-        document.querySelector("#xl").style.backgroundColor = "black";
-        document.querySelector("#xl").style.color = "white";
-    })
+    // document.querySelector("#s").addEventListener("click", function(){
+    //     document.querySelector("#s").style.backgroundColor = "black";
+    //     document.querySelector("#s").style.color = "white";
+    // })
+    // document.querySelector("#m").addEventListener("click", function(){
+    //     document.querySelector("#m").style.backgroundColor = "black";
+    //     document.querySelector("#m").style.color = "white";
+    // })
+    // document.querySelector("#l").addEventListener("click", function(){
+    //     document.querySelector("#l").style.backgroundColor = "black";
+    //     document.querySelector("#l").style.color = "white";
+    // })
+    // document.querySelector("#xl").addEventListener("click", function(){
+    //     document.querySelector("#xl").style.backgroundColor = "black";
+    //     document.querySelector("#xl").style.color = "white";
+    // })
 
+
+    function filterNumber(){
+        var selected = document.querySelector("#filter").value;
+        if (selected == "high"){
+            data.sort(function (a,b){
+                return Number(b.price) - Number(a.price);
+            });
+        }
+        if (selected == "low"){
+            data.sort(function (a,b){
+                return Number(a.price) - Number(b.price);
+            });
+        }
+        displayItem(data);
+    }
+
+
+function filterDisplay(){
+        window.location.href = "see2.html"
+//     document.querySelector("#container").style.gridTemplateColumns = "repeat(2, 1fr)";
+//     document.querySelector("#container").style.marginLeft = "50px"
+//     document.querySelector("#img").style.width = "560px";
+//     document.querySelector("#img").style.height = "700px";
+//     document.querySelector("#name").style.width = "560px";
+//     document.querySelector("#name").style.height = "700px";
+//     width:560px;
+//  height: 700px;
+
+    }
+    // grid-template-columns: repeat(4,1fr);
 </script>
