@@ -1,43 +1,41 @@
-.loginarea{
-    /* margin-top: 15px; */
+.createaccountarea{
+    margin-top: -5px;
     margin-left: 980px;
     margin-bottom: 200px;
     background-color: transparent;
-    /* position: relative; */
+    position: relative;
     font-family: 'Archivo Narrow', sans-serif;
     /* margin: auto; */
 }
 
-.loginbox{
+.createaccountbox{
+
     width: 350px;
     height: 400px;
-    margin-top: -180px;
-    margin-right: 10%;
-    /* position: relative; */
+    position: fixed;
     background-color: white;
     padding: 8px;
-    overflow: hidden;
-    /* border: 1px solid red; */
-    position: fixed;
     display: none;
+    margin-top: -180px;
+    
     
 }
 
-.loginheader{
+.createaccountheader{
     display: flex;
     width: 364px;
-    height: 42px;
+    height: 38px;
     margin-top: -10px;
     margin-left: -8px;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
 }
 
-.loginword{
-    width: 100px;
+.createaccountword{
+    width: 400px;
     height: 40%;
-    margin-left: 150px;
-    padding: 15px 10px;
+    margin-left: 110px;
+    padding: 5px 10px;
     font-size: 20px;
     font-weight: bold;
 }
@@ -96,24 +94,19 @@ a{
     background-color: black;
     color: white;
     border-radius: 5px;
-    font-weight: bold;
     
 }
 
-.register-submit-btn{
-    height: 50px;
+.createAccount-submit-btn{
+    height: 60px;
     width: 100%;
     padding: 10px 30px;
     cursor: pointer;
     display: block;
     margin-top: 20px;
-    background-color: white;
-    color: black;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-.register-submit-btn:hover{
     background-color: black;
     color: white;
+    border-radius: 5px;
+    font-weight: bold;
+
 }
