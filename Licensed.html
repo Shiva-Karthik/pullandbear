@@ -37,7 +37,7 @@
      </body>
     </html>
 <script>
-    var cart=[];
+   var cart= JSON.parse(localStorage.getItem("cart"))||[];
     var data = [
     {image: "https://static.pullandbear.net/2/photos//2022/V/0/2/p/4590/517/600/4590517600_4_1_8.jpg?t=1639396490158&imwidth=563",
      name: "Cowboy Bebop Sweatshirt",

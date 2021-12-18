@@ -1,6 +1,6 @@
-.loginarea{
+.createaccountarea{
     margin-top: -5px;
-    margin-left: 1140px;
+    margin-left: 980px;
     margin-bottom: 200px;
     background-color: transparent;
     position: relative;
@@ -8,17 +8,20 @@
     /* margin: auto; */
 }
 
-.loginbox{
+.createaccountbox{
+
     width: 350px;
     height: 400px;
-    position: relative;
+    position: fixed;
     background-color: white;
     padding: 8px;
-    overflow: hidden;
+    display: none;
+    margin-top: -180px;
+    
     
 }
 
-.loginheader{
+.createaccountheader{
     display: flex;
     width: 364px;
     height: 38px;
@@ -28,7 +31,7 @@
 
 }
 
-.loginword{
+.createaccountword{
     width: 400px;
     height: 40%;
     margin-left: 110px;
@@ -55,7 +58,7 @@ a{
 }
 
 
-#email {
+#emailregd {
     line-height: 50px;
     width: 100%;
     padding: 10px 0;
@@ -68,7 +71,7 @@ a{
     background-color: transparent;
 }
 
-#password{
+#passwordregd{
     line-height: 50px;
     width: 100%;
     padding: 10px 0;

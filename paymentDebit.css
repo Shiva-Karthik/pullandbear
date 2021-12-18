@@ -4,49 +4,70 @@
 #orderSummary {
     background-color: whitesmoke;
     width: 365px;
-    height: 610px;
-    overflow: hidden;
+    height: 620px;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
 }
 #leftdiv {
     width: 80%;
 }
-#mainHeading {
-    text-align: center;
-}
-#homeDelivery {
-    text-align: center;
-    border: 1px solid #dadada;
-    width: 90%;
-    margin: auto;
-    margin-top: 100px;
-}
-#homeDelivery>img {
-    height: 52px;
-    padding-top: 30px;
-}   
-#homeDelivery:hover {
-    border: 1px solid black;
-    cursor: pointer;
-}
-#terms{
+#terms>p{
     text-align: right;
-    padding: 135px 20px 20px;
+    padding: 160px 20px 20px;
     color: gray;
     text-decoration: underline;
-}
-input {
-    display: block;
-    margin-left: 93%;
-    margin-top: 3%;
-    height:30px; 
-    width:30px;
-    margin-right: 5%;
 }
 h1 {
     font-size: 40px;
 }
 h1:hover {
     cursor: pointer;
+}
+
+input {
+    border: 1px solid gray;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    width: 40%;
+    margin: 20px 20px 50px;
+    padding: 10px;
+}
+
+#month, #year, #cvv {
+    width: 10%;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    padding-left: 20px;
+}
+button {
+    cursor: pointer;
+    width: 40%;
+    height: 50px;
+    border-radius: 5px;
+    margin: 10px;
+    font-size: 1.5em;
+}
+
+#return:hover {
+    background-color: black;
+    color: white;
+    border: 1px solid;
+}
+
+#return {
+    background-color: white;
+    border: 1px solid black;
+}
+#continue {
+    background-color: black;
+    color: white;
+    border: 1px solid;
 }
 
 #mainHeading {
@@ -57,7 +78,12 @@ h1:hover {
 
 #contact,#heading,#back:hover {
     cursor: pointer;
+} 
+
+#homeDelivery {
+    margin-top: 50px;
 }
+
 
 header {
     font-size: 20px;
@@ -70,7 +96,6 @@ hr {
 
 #productInfo {
 height: 70%;
-overflow: hidden;
 overflow-y: scroll;
 }
 
@@ -78,7 +103,7 @@ overflow-y: scroll;
     display: flex;
     justify-content: space-around;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    height: 100px;
+    height: 17%;
     background-color: #f6f6f6;
 }
 

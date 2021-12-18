@@ -1,6 +1,6 @@
-.loginarea{
+.helloarea{
     margin-top: -5px;
-    margin-left: 1150px;
+    margin-left: 980px;
     margin-bottom: 200px;
     background-color: transparent;
     position: relative;
@@ -8,18 +8,20 @@
     /* margin: auto; */
 }
 
-.loginbox{
+.hellobox{
+
     width: 350px;
     height: 400px;
-    position: relative;
+    position: fixed;
     background-color: white;
     padding: 8px;
     overflow: hidden;
-    margin-top: 20px;
+    margin-top: -180px;
+    display: none;
     
 }
 
-.loginheader{
+.helloheader{
     display: flex;
     width: 364px;
     height: 38px;
@@ -29,7 +31,7 @@
 
 }
 
-.loginword{
+.helloword{
     width: 60px;
     height: 40%;
     padding: 10px 10px;

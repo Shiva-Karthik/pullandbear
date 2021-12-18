@@ -4,8 +4,10 @@
 #orderSummary {
     background-color: whitesmoke;
     width: 365px;
-    height: 610px;
-    overflow: hidden;
+    height: 620px;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
 }
 #leftdiv {
     width: 80%;
@@ -17,47 +19,52 @@
     text-align: center;
     border: 1px solid #dadada;
     width: 90%;
-    margin: auto;
-    margin-top: 100px;
+    margin: 150px auto;
+    display: flex;
 }
 #homeDelivery>img {
     height: 52px;
     padding-top: 30px;
 }   
 #homeDelivery:hover {
-    border: 1px solid black;
     cursor: pointer;
 }
 #terms{
     text-align: right;
-    padding: 135px 20px 20px;
+    padding: 65px 20px 20px;
     color: gray;
     text-decoration: underline;
 }
 input {
-    display: block;
-    margin-left: 93%;
-    margin-top: 3%;
     height:30px; 
     width:30px;
-    margin-right: 5%;
+    margin-left: 5px;
 }
 h1 {
     font-size: 40px;
+    display: inline;
 }
 h1:hover {
     cursor: pointer;
 }
 
+#debit {
+    width: 50%;
+}
+#paypal {
+    width: 50%;
+    border-left: 1px solid #dadada;
+}
+
 #mainHeading {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
 }
 
 #contact,#heading,#back:hover {
     cursor: pointer;
 }
+
 
 header {
     font-size: 20px;
@@ -70,7 +77,6 @@ hr {
 
 #productInfo {
 height: 70%;
-overflow: hidden;
 overflow-y: scroll;
 }
 
@@ -78,7 +84,7 @@ overflow-y: scroll;
     display: flex;
     justify-content: space-around;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    height: 100px;
+    height: 17%;
     background-color: #f6f6f6;
 }
 

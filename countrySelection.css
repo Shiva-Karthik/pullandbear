@@ -1,5 +1,6 @@
 body {
     line-height: 1px;
+    font-family: 'Archivo Narrow', sans-serif;
 }
 
 img {
@@ -19,7 +20,7 @@ img {
     width: 80%;
     margin: -35% auto;
     text-align: center;
-    font-family: Graphik, Arial, sans-serif;
+    /* font-family: Graphik, Arial, sans-serif; */
 }
 /* #container>div{
     background-color: white;    
@@ -28,6 +29,8 @@ img {
 
 #pull_bear {
     grid-area: 1/1/2/5;
+    letter-spacing: 1em;
+    width: 90%;
 }
 
 #rememberSelect{
@@ -35,9 +38,14 @@ background-color: white;
 height: 35px;
 padding: 0px 0px 15px;
 /* padding: 10px 0px 0px; */
-font-size: 13px;
+font-size: 14px;
 width: 90%
 }
+
+#remember {
+    padding-right: 20px;
+}
+
 
 
 button:hover {
@@ -83,4 +91,9 @@ input {
 
 select {
     text-transform: uppercase;
+}
+
+
+#arrow {
+    transform: rotate(-90deg); 
 }

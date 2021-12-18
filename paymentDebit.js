@@ -1,29 +1,29 @@
-
-document.querySelector("#homeDelivery").addEventListener("click", function(){
-    window.location.href = "details.html";
-})
+document.querySelector("#return").addEventListener("click", function(){
+    window.location.href = "paymentMode.html"
+});
 
 document.querySelector("#heading").addEventListener("click", function(){
     window.location.href = "manHomePage.html";
 });
+
 document.querySelector("#contact").addEventListener("click", function(){
     window.location.href = "contact.html";
 });
 
-// var arr = [{image: "https://static.pullandbear.net/2/photos//2022/V/0/2/p/8711/514/505/03/8711514505_6_1_8.jpg?t=1638891573420&imwidth=375", 
-// name: "Coloured STWD puffed gilet", size: "L",
-// price: "29.99 €"}, 
-// // {image: "https://static.pullandbear.net/2/photos//2022/V/0/2/p/4674/501/707/4674501707_2_7_8.jpg?t=1638889763409&imwidth=375", 
-// // name: "Skate Chino trousers", size: "M",
-// // price: "29.99 €"},
-// // {image: "https://static.pullandbear.net/2/photos//2022/V/1/2/p/2301/940/008/02/2301940008_5_1_8.jpg?t=1638895143585&imwidth=750",
-// // name: "Contrast trainers", size: "S",
-// // price: "49.99 €", 
-// // },
-// // {image: "https://static.pullandbear.net/2/photos//2022/V/0/2/p/8685/917/707/02/8685917707_6_1_8.jpg?t=1638890354141&imwidth=375",
-// // name: "Coloured jeans with faded details", size: "XL",
-// // price: "35.99 €",}
-// ]
+document.querySelector("#back").addEventListener("click", function(){
+    window.location.href = "paymentMode.html";
+});
+
+document.querySelector("#continue").addEventListener("click", function(){
+var person = prompt("Please enter your OTP", "");
+if(person == "1234"){
+    alert("Payment Successful !\nThank you for shopping");
+    window.location.href = "manHomePage.html";
+}
+else{
+    alert("Wrong OTP, Try Again");
+}  
+});
 
 var arr = JSON.parse(localStorage.getItem("cart"))||[];
 var totalAmount =  0;
@@ -160,4 +160,3 @@ arr.map(function(el){
 //                     </div>
 totalAmount = Math.ceil(totalAmount);
 document.querySelector("#totalPrice").textContent = totalAmount +" "+"€";
-document.querySelector("#homePrice").textContent = totalAmount +" "+"€";

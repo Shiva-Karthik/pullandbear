@@ -3,6 +3,11 @@
 }
 
 
+#heading {
+   text-decoration: none;
+   color: black;
+   font-family: 'Archivo Narrow', sans-serif;
+}
 
 #container{
    display:inline-grid;
