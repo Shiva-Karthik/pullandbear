@@ -12,9 +12,7 @@
              "a b c"
              "d e c";
          }
-        /* .container>div{
-             border: 1px solid black;
-         }*/
+
          .box1{
              grid-area: a;
          }
@@ -38,21 +36,18 @@
              height: 800px;
              width: 380px;
              margin-top: 20px;
-            /* border: 1px solid red;*/
              margin: auto;
             
          }
          .sidebar>.text1{
              font-size: x-large;
              font-weight: bold;
-           /*  border: 1px solid blue;*/
              margin-top: 30px;
          }
          .flexbtn{
              display: flex;
              height: 60px;
              width: 100%;
-            /* border: 1px solid rgb(235, 45, 77);*/
          }
          .flexbtn>button{
              width: 30%;
@@ -66,27 +61,23 @@
               margin-top: 30px;
              height: 60px;
              width: 100%;
-            /* border: 1px solid rgb(235, 45, 77);*/
              background-color:black ;
              align-items: center;
              padding-top: 8px;
           
               }
          #font{
-             /* margin-left: 20%; */
              color: white;
              font-weight: bold;
              text-align: center;
          }
          #middiv{
         margin-top: 20px;
-             /* align-items: centre; */
          }
          .addto:hover{
              background-color: rgb(230, 42, 83);
          }
          #more{
-            /* border:1px solid black;*/
              height:300px;
          }
          #more>div{

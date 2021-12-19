@@ -75,11 +75,8 @@ button:hover {
     margin: -230px 0px 150px 0px;
     position: relative;
 }
-/* div {
-    margin: 10px;
-} */
 
-/* Footer Responsive  */
+/* Footer  */
 
 .page-wrapper {
     min-height: 100%;
@@ -375,17 +372,6 @@ button:hover {
       margin-bottom: 10px;
   }
 
-
-  /* Navbar CSS */
-/* 
-  .womenbody{
-    background-image:url(https://static.pullandbear.net/2/static2/itxwebstandard/images/home/2021-12/09/Newin_woman.jpg?v=20211214040503&imwidth=1920);
-    background-size:cover;
-    background-position: auto;
-    width: 100%;
-    height:700px;
-} */
-
 #font{
     font-size: 40px;
 }
@@ -400,7 +386,6 @@ button:hover {
    display:flex;
    position: fixed;
    justify-content: right;
-   /* border: 1px solid red; */
 }
 .left{
    font-size: 15px;
@@ -411,18 +396,11 @@ button:hover {
 }
 .middle{
    width:30%;
-   /* border: 1px solid blue; */
     }
 .middle>div{
-   /* margin:auto; */
    width:30%;
    height:50%;
-   /* border:1px solid cornflowerblue; */
-   /* height: ; */
    text-align: center;
- 
-     ;
-
 }
 .right{
    color: rgb(31, 5, 5);
@@ -437,16 +415,13 @@ button:hover {
 .search{
    width: 60%;
    margin-left: 20%;
-   /* border:1px solid cadetblue; */
 
 }
 .signin{
    width:10%;
-   /* border:1px solid rgb(240, 151, 17); */
 }
 .bag{
    width:10%;
-   /* border:1px solid rgb(119, 9, 114); */
 }
 .women{
   margin-right: 5px;
@@ -481,7 +456,6 @@ margin-left: 35px;
 height:400px;
 width :300px;
 margin-top: -200px;
-/* border: 1px solid rgb(104, 45, 243); */
 align-content: space-between;
 position: fixed;
 font-family: "Graphik Cond Web",Graphik,Arial,sans-serif;
@@ -495,16 +469,13 @@ text-transform: uppercase;
 .mid{
 width: 100px;
 margin: auto;
-/* margin-top: ; */
 height: 100px;
 background-color: transparent;
-/* border: 1px solid rgb(14, 238, 25); */
 }
 .mid>div{
 margin: auto;
 width:200px;
 height: 100px;
-/* border:1px solid royalblue; */
 align-items: center;
 align-content: space-around;
 }
@@ -547,7 +518,6 @@ transition: 0.5s;
 .white{
    height: 600px;
    width: 200px;
-   /* border: 1px solid purple; */
 }
 #btn{
 width: 80px;
@@ -565,47 +535,14 @@ color:black;
 
 
 
- /* @media screen and (max-width :700px){
-   .box1{
-      height:300px;
-      width :100px;
-      /* border: 1px solid rgb(104, 45, 243); */
-      /* align-content: space-between;
-      
-      font-family: "Graphik Cond Web",Graphik,Arial,sans-serif;
-      font-size: 20px;
-      font-weight: 300;
-      letter-spacing: 0.08px;
-      line-height: 10px;
-      text-transform: uppercase;
-      
-      
-      }
-      .box1:hover{
-         background: rgb(255, 255, 255);
-         position: fixed;
-         width:30%;
-         height:100%;
-         transition: 0.5s;
-         }
-        }  */
-
-
  #search {
   display: flex;
   margin: auto;
-  /* border: 1px solid blue; */
   width: 60%;
 }
 .search, .signin, .bag:hover {
 cursor: pointer;
 }
-/* #search > div > div {
-  margin-top: 20px;
-} */
-/* #searchImage {
-  /* border: 1px solid brown; */
-/* }  */
 #searchImagePng {
   width: 30px;
   margin-left: 230px;
@@ -613,6 +550,15 @@ cursor: pointer;
 #searchInput {
   height: 30px;
   width: 70%;
+  margin: auto;
+}
+#searchBar>div:nth-child(4){
+  margin-top: 25px;
+}
+#searchBar>div:nth-child(4)>div:hover {
+font-size: 20px;
+font-weight: bold;
+cursor: pointer;
 }
 input {
   height: 30px;
@@ -623,15 +569,19 @@ input {
 }
 #searchBar {
   text-align: center;
-  border: 1px solid black;
-  line-height: 20px;
+  line-height: 25px;
   position: fixed;
   margin: 0px 180px 0px 200px;
   background-color: white;
   display: none;
   width: 70%;
-  margin-top: -180px
+  margin-top: -180px;
+  height: 430px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  border-radius: 10px;
 }
+
+
 
 #header {
   display: flex;

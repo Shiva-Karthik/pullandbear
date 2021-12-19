@@ -141,40 +141,6 @@ function displayItem(){
 })
 };
 
-// document.querySelector("#cancel").addEventListener("click", function(){
-//         document.querySelector(".sidebar").style.right = "-375px";
-//         document.querySelector("#cancel").style.right = "-375px";
-//         document.querySelector("#filter").style.opacity = "1";
-//         // document.querySelector("#cancel").style.opacity = "0";
-
-        
-//     });
-
-    // document.querySelector("#filter").addEventListener("click", function(){
-    //     document.querySelector(".sidebar").style.right = "0px";
-    //     document.querySelector("#filter").style.opacity = "0";
-    //     document.querySelector("#cancel").style.right = "0";
-    //     document.querySelector("#cancel").style.transition = "all .5s ease";
-    //     // document.querySelector("#cancel").style.opacity = "1";
-    // });
-
-    // document.querySelector("#s").addEventListener("click", function(){
-    //     document.querySelector("#s").style.backgroundColor = "black";
-    //     document.querySelector("#s").style.color = "white";
-    // })
-    // document.querySelector("#m").addEventListener("click", function(){
-    //     document.querySelector("#m").style.backgroundColor = "black";
-    //     document.querySelector("#m").style.color = "white";
-    // })
-    // document.querySelector("#l").addEventListener("click", function(){
-    //     document.querySelector("#l").style.backgroundColor = "black";
-    //     document.querySelector("#l").style.color = "white";
-    // })
-    // document.querySelector("#xl").addEventListener("click", function(){
-    //     document.querySelector("#xl").style.backgroundColor = "black";
-    //     document.querySelector("#xl").style.color = "white";
-    // })
-
 
     function filterNumber(){
         var selected = document.querySelector("#filter").value;
@@ -194,16 +160,5 @@ function displayItem(){
 
 function filterDisplay(){
         window.location.href = "newclothing2.html"
-//     document.querySelector("#container").style.gridTemplateColumns = "repeat(2, 1fr)";
-//     document.querySelector("#container").style.marginLeft = "50px"
-//     document.querySelector("#img").style.width = "560px";
-//     document.querySelector("#img").style.height = "700px";
-//     document.querySelector("#name").style.width = "560px";
-//     document.querySelector("#name").style.height = "700px";
-//     width:560px;
-//  height: 700px;
 
     }
-    // grid-template-columns: repeat(4,1fr);
-
-    // document.querySelector("#body").style.fontFamily = "Archivo Narrow, sans-serif";

@@ -74,12 +74,6 @@ a:hover:nth-child(2){
     text-decoration: none;
 }
 
-/* .midimg {
-    border: 1px solid red;
-    height: 280px;
-    width: 400px;
-    margin: 140px 0px 0px 300px;
-} */
 
 
 .save{
@@ -93,30 +87,6 @@ a:hover:nth-child(2){
     color: white;
 }
 
-/* .updatepass {
-    width: 100%;
-    height: 45px;
-    border: 1px solid black;
-    margin-top: 10px;
-    text-align: center;
-    cursor: pointer;
-}
-
-.updateemail {
-    width: 100%;
-    height: 45px;
-    border: 1px solid black;
-    margin-top: 10px;
-    text-align: center;
-    cursor: pointer;
-}
-
-.save div {
-    width: 150px;
-    height: 15px;
-    margin-left: 430px;
-    margin-top: 10px;
-} */
 
 .updatepass div {
     width: 150px;

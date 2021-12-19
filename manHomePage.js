@@ -5,17 +5,6 @@ document.querySelector(".search").addEventListener("click", function(){
     document.querySelector("#searchBar").style.display = "block";
 })
 
-// var prevScrollpos = window.pageYOffset;
-// window.onscroll = function() {
-// var currentScrollPos = window.pageYOffset;
-//   if (prevScrollpos > currentScrollPos) {
-//     document.querySelector(".navbar").style.top = "0";
-//   } else {
-//     document.querySelector(".navbar").style.top = "-10px";
-//   }
-//   prevScrollpos = currentScrollPos;
-// }
-
 
 document.querySelector(".signin").addEventListener("click", function(){
     document.querySelector(".loginbox").style.display = "block";
@@ -28,7 +17,6 @@ function createAccount() {
     document.querySelector(".createaccountbox").style.display = "none";
 var email = document.querySelector("#email").value;
 var password = document.querySelector("#password").value;
-// console.log(email,password)
 
 var userCred = {
   emailAdd: email,
@@ -50,19 +38,6 @@ document.querySelector(".register-submit-btn").addEventListener("click", functio
     document.querySelector(".loginbox").style.display = "none";
 })
 
-// document.querySelector(".createAccount-submit-btn").addEventListener("click", function(){
-//   var userData = JSON.parse(localStorage.getItem("userDatabase"));
-//   var email = document.querySelector("#emailregd").value;
-//   var password = document.querySelector("#passwordregd").value;
-//   if(email !== "" || password !== ""){
-//   var userCred = {
-//     emailAdd: email,
-//     pass: password,
-//   };
-//   userData.push(userCred);
-//   localStorage.setItem("userDatabase", JSON.stringify(userData));
-//   document.querySelector(".hellobox").style.display = "block";
-// } })
 
 document.querySelector(".createAccount-submit-btn").addEventListener("click", createAccount);
 var userData = JSON.parse(localStorage.getItem("userDatabase")) || [];
@@ -84,12 +59,6 @@ document.querySelector(".hellobox").style.display = "block"
 
 
 
-// hello
-
-// function hello() {
-//     window.location.href = "hello.html"
-// }
-
 document.querySelector(".cancelbutton").addEventListener("click", function(){
     document.querySelector(".hellobox").style.display = "none";
 })
@@ -108,22 +77,19 @@ document.querySelector("#logout").addEventListener("click", function(){
 
 document.querySelector(".login-submit-btn").addEventListener("click", login);
   var regdUsers = JSON.parse(localStorage.getItem("userDatabase"));
-  // console.log(regdUsers)
   function login() {
     var email = document.querySelector("#email").value;
-    // console.log(email)
     var password = document.querySelector("#password").value;
     var flag = true;
-    // console.log(password)
-    for (var i = 0; i < regdUsers.length; i++) {
+    for (var i = 0; i <regdUsers.length; i++) {
+      console.log(regdUsers[i].emailAdd, email)
+      console.log(regdUsers[i].pass, password)
       if (regdUsers[i].emailAdd === email && regdUsers[i].pass === password) {
-        // console.log("registered user");
-      } else {
         flag = false;
         break;
       }
     }
-    if(flag===false){
+    if(flag===true){
         alert("Wrong Email address or Password");
         window.location.href = "manHomePage.html"
         document.querySelector(".hellobox").style.display = "none";
@@ -143,13 +109,10 @@ document.querySelector(".login-submit-btn").addEventListener("click", login);
     document.querySelector(".box1").style.cursor = "pointer";
   }
 
-  // function closebox1(){
-  //   document.querySelector(".box1").style.display = "none";
-  // }
 
   window.addEventListener("scroll", function(){
     var scrolled = window.scrollY;
-    // console.log(scrolled);
+
     if(scrolled>100){
       document.querySelector(".box1").style.display = "none";
       document.querySelector(".middle>div").style.display = "none";
